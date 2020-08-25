@@ -8,12 +8,12 @@ Here's an example docker-compose.yml file using rwasa:
 version: '3.6'
 services:
   php:
-    image: dinamic/php-unix-socket:7.2
+    image: dinamic/php-unix-socket:7.4
     volumes:
       - "/path/to/src:/var/www:cached"
       - "unixSocket:/var/run/docker:cached"
   rwasa:
-    image: scttmthsn/rwasa
+    image: dinamic/docker-rwasa
     volumes:
       - "/path/to/src:/var/www:cached"
       - "unixSocket:/var/run/docker:cached"
